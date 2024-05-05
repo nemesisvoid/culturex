@@ -12,7 +12,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 const { Sider, Content } = Layout;
 
 function AppLayout() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <Layout className='font-sans bg-black text-white'>
