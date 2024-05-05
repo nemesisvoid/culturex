@@ -17,7 +17,7 @@ function Bookmark() {
             text='Bookmarked Movies'
             type='h1'
           />
-          <ul className='grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1 gap-10'>
+          <ul className='grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1 '>
             {filteredMovies.map(bookmark => (
               <BookmarkList
                 key={bookmark.id}
