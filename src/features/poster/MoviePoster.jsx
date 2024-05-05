@@ -19,7 +19,7 @@ function MoviePoster() {
     <div className='lg:row-start-1 lg:mb-12 lg:mt-12'>
       {imageLoad && <MiniSpinner />}
       <img
-        className='rounded-3xl shadow-lg md:w-[95%]'
+        className='rounded-3xl shadow-lg'
         src={`${imgSrc}${details?.poster_path}`}
         alt={`${details?.title} image`}
         onLoad={handleImageLoad}

@@ -22,26 +22,25 @@ function Carousel({ children }) {
   return (
     <Swiper
       // onSwiper={setSwiper}
-      className=''
+      className='px-8'
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={40}
+      spaceBetween={35}
       slidesPerView={3}
       loop={true}
       navigation={true}
       breakpoints={{
         0: {
           slidesPerView: 1,
-          spaceBetween: 14,
+          spaceBetween: 20,
         },
 
         750: {
           slidesPerView: 2,
-          spaceBetween: 12,
         },
 
         1000: {
           slidesPerView: 4,
-          spaceBetween: 15,
+          spaceBetween: 25,
         },
       }}
       pagination={{

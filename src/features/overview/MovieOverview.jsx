@@ -7,6 +7,7 @@ import Rating from '../Ratings/Rating';
 import { useState } from 'react';
 import { useWatched } from '../../hooks/useWatched';
 import { useParams } from 'react-router-dom';
+import Header from '../../components/Header';
 
 function MovieOverview() {
   const { id } = useParams();
@@ -54,21 +55,22 @@ function MovieOverview() {
       <MovieCast />
 
       {!isWatched(id) ? (
-        <div className='p-4 w-[70%] flex flex-col items-center justify-center border-none rounded-lg lg:mb-0 bg-gray-900 mb-[6rem]'>
+        <div className=' py-6 w-[70%] sm:w-[100%] flex flex-col items-center justify-center border-none rounded-lg lg:mb-0 bg-[#2F252D] mb-[6rem]'>
+          <Header text='Rate this movie' />
           <Rating
             rating={rating}
             setRating={setRating}
           />
           {rating > 0 && (
             <button
-              className='mt-8 text-[1.8rem] bg-purple-600 px-10 py-2 rounded-md'
+              className='mt-8 text-[1.8rem] bg-[#282128] px-10 py-2 rounded-md hover:bg-[#261f26]'
               onClick={() => handleAddWatched(watchedMovie)}>
               + add to watched list
             </button>
           )}
         </div>
       ) : (
-        <div className='py-4 w-[50%] sm:w-[70%] border-none rounded-lg bg-gray-900 mb-[6rem] lg:mb-0 sm:mb-[2rem] xs:w-[100%]'>
+        <div className='py-6 w-[50%] sm:w-[70%] border-none rounded-lg bg-[#211c21] mb-[6rem] lg:mb-0 sm:mb-[2rem] xs:w-[100%]'>
           <p className='text-[1.6rem] text-center'>You rated this movie {watchedUserRating(id)}⭐</p>
         </div>
       )}

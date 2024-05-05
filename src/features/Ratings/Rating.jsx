@@ -17,7 +17,7 @@ function Rating({ rating, setRating }) {
         style={{ stroke: 'yellow', strokeWidth: '40px' }}
         onChange={handleRatingChange}
         tooltips={tooltips}
-        className='space-y-4'
+        className='space-y-6'
       />
     </div>
   );

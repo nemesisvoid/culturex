@@ -17,14 +17,13 @@ function SearchQueryList({ query, isLoading }) {
         <img
           src={imageUrl + poster_path}
           alt={`${name || title} poster`}
-          className='h-[10rem] w-[10rem] object-cover rounded-full xs:hidden '
+          className='h-[10rem] w-[10rem] object-cover rounded-full xs:hidden sm:h-[7rem] sm:w-[7rem]'
         />
 
         <div className='text-white overflow-hidden'>
           <div className='overflow-hidden text-nowrap max-w-[40ch] text-ellipsis whitespace-nowrap'>{name || title}</div>
-
+          <span className='mr-4'>{removeYear(release_date || first_air_date)}</span>
           <p className='flex items-center flex-wrap'>
-            <span className='mr-4'>{removeYear(release_date || first_air_date)}</span>
             <FaStar />
             <span>{!vote_average ? 'N/A' : formatVote(vote_average)}</span>
           </p>
