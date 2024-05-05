@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* ant design overwrite styles */
+
+.ant-sider {
+  background-color: #2f252d !important;
+}
+
+.nav-text {
+  color: #fff !important;
+}
+
+.ant-menu-item {
+  padding-top: 0.4rem;
+}
+
+.ant-menu-item-selected {
+  background-color: #221c22 !important;
+}
+
+.shadow {
+  box-shadow: 0 0.4rem 1.4rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+/* scrollbar style */
+.scrollbar::-webkit-scrollbar {
+  width: 1.2rem;
+  color: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 1.2rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #282128;
+  border-radius: 1.2rem;
+}
+
+/* swiper styles */
+.swiper-button-next {
+  z-index: 10;
+  color: #e6c0df !important;
+  width: 10%;
+}
+
+.swiper-button-prev {
+  z-index: 10;
+  color: #e6c0df !important;
+}
+
+.swiper-slide {
+  user-select: none;
+  padding: 2rem 0;
+}
+
+.swiper-pagination span {
+  background: #5f4d5b !important;
+}
+
+@media (max-width: 750px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+.spinner-1 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: s1 1s infinite;
+}
+@keyframes s1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.spinner-2 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: s2 1s infinite linear;
+}
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-3 {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: s3 1s infinite linear;
+}
+@keyframes s3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-4 {
+  width: 50px;
+  --b: 8px; /* the border thickness */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #f03355) content-box;
+  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 1s infinite steps(10);
+}
+@keyframes s4 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-5 {
+  width: 50px;
+  --b: 8px; /* the border thickness */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #514b82;
+  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
+    radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s5 1s infinite;
+}
+@keyframes s5 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.spinner-6 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  background: radial-gradient(farthest-side, #ffa516 95%, #0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 5px), #ffa516 calc(100% - 4px)) content-box;
+  animation: s6 2s infinite;
+}
+@keyframes s6 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-7 {
+  width: 50px;
+  aspect-ratio: 1;
+  --_c: radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--_c) top, var(--_c) left, var(--_c) right, var(--_c) bottom;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s7 1s infinite;
+}
+@keyframes s7 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.spinner-8 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #f03355;
+  --_c: no-repeat radial-gradient(farthest-side, currentColor 92%, #0000);
+  background: var(--_c) 50% 0 /12px 12px, var(--_c) 50% 100%/12px 12px, var(--_c) 100% 50%/12px 12px, var(--_c) 0 50%/12px 12px,
+    var(--_c) 50% 50%/12px 12px, conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px / calc(50% + 2px) calc(50% + 2px);
+  animation: s8 1s infinite linear;
+}
+@keyframes s8 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.spinner-9 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #f03355 95%, #0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 14px), #ccc 0);
+  animation: s9 2s infinite linear;
+}
+@keyframes s9 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-10 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #854f1d;
+  border-radius: 50%;
+  display: grid;
+  background: conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px / calc(50% + 2px) calc(50% + 2px),
+    radial-gradient(farthest-side, currentColor 6px, #0000 7px calc(100% - 6px), currentColor calc(100% - 5px)) no-repeat;
+  animation: s10 2s infinite linear;
+  position: relative;
+}
+.spinner-10:before {
+  content: '';
+  border-radius: inherit;
+  background: inherit;
+  transform: rotate(45deg);
+}
+@keyframes s10 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
